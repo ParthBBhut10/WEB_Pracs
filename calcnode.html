@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <center>
+        <table cellpadding="10" cellspacing="10" style="font-size:2em">
+            <tr>
+                <td>Number 1:</td>
+                <td><input type="text" id="num1" name="num1" /></td>
+            </tr>
+            <tr>
+                <td>Number 2:</td>
+                <td> <input type="text" id="num2" name="num2" /></td>
+            </tr>
+            <tr>
+                <td> <label for=" Operator"> Operator:</label></td>
+                <td> <select name="Operator" id="op" name="op">
+                        <option value="+">Add</option>
+                        <option value="-">Subtract</option>
+                        <option value="*">Muliply</option>
+                        <option value="/">Divide</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="cover">
+                    <center> <input type="button" value="Solve" onclick="calc()" />
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <p id="result" name="r1"></p>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script type="text/javascript">
+        function calc() {
+            var D = "0";
+            var A = document.getElementById("num1").value;
+            var B = document.getElementById("op").value;
+            var C = document.getElementById("num2").value;
+            if (B === "+") {
+                D = parseInt(A) + parseInt(C);
+            }
+            else if (B === "-") {
+                D = parseInt(A) - parseInt(C);
+            }
+            else if (B === "*") {
+                D = parseInt(A) * parseInt(C);
+            }
+            else if (B === "/") {
+                D = parseInt(A) / parseInt(C);
+            }
+            document.getElementById("result").innerHTML = "Result is :" + D;
+            return false;
+        }
+    </script>
+</body>
+
+</html>
