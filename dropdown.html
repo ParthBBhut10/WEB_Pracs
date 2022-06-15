@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Select your color:
+        <select id="mySelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>White</option>
+            <option>Orange</option>
+        </select>
+        <input type="button" value="No.of Count" onclick="getOptions()">
+    </form>
+    <script>
+        function getOptions() {
+            var x = document.getElementById("mySelect");
+            var txt = "No.of item in dropdown is:";
+            var i;
+            l = document.getElementById("mySelect").length;
+            txt = txt + l;
+            for (i = 0; i < x.lenght; i++) {
+                txt = txt + "\n" + x.options[i].text;
+            }
+            alert(txt);
+        }
+    </script>
+</body>
+
+</html>
