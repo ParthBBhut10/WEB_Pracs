@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match experiment</title>
+    <script>
+        function occur() {
+            var ogstr = document.getElementById("ipstr").value
+            var chstr = document.getElementById("cstr").value
+            var repstr = document.getElementById("rpstr").value
+            var re = RegExp(chstr, 'g')
+            document.getElementById('ocr').innerHTML = (ogstr.match(re)).length;
+        }
+        function repl() {
+            var ogstr = document.getElementById("ipstr").value
+            var chstr = document.getElementById("cstr").value
+            var repstr = document.getElementById("rpstr").value
+            var re = RegExp(chstr, 'g')
+            document.getElementById('rep').innerHTML = ogstr.replace(re, repstr)
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Enter string :- </td>
+            <td><input type="text" id="ipstr"></td>
+        </tr>
+        <tr>
+            <td>Pattern to check :- </td>
+            <td><input type="text" id="cstr"></td>
+        </tr>
+        <tr>
+            <td>Replace with:- </td>
+            <td><input type="text" id="rpstr"></td>
+        </tr>
+        <tr>
+            <td>No of occurences :- </td>
+            <td>
+                <p id="ocr"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>After replace :- </td>
+            <td>
+                <p id="rep"></p>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="occur()">Search</button></td>
+            <td><button onclick="repl()">Replace</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
