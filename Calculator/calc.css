@@ -1,0 +1,58 @@
+.container {
+    background-color: grey;
+
+}
+
+.screen {
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    position: radius;
+    height: 50px;
+    width: 500px;
+    justify-content: left;
+
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 5px;
+    margin: auto;
+
+}
+
+.button {
+    background-color: #ffff;
+    height: 30px;
+    width: 150px;
+    font-style: bold;
+    font-size: large;
+}
+
+.operator {
+    background-color: yellow;
+    color: black;
+    height: 30px;
+    width: 150px;
+    font-style: bold;
+    font-size: large;
+}
+
+.equal-sign {
+    background-color: blue;
+    color: #ffff;
+    height: 30px;
+    width: 150px;
+    font-style: bold;
+    font-size: large;
+}
+
+.clear {
+    background-color: green;
+    color: #ffff;
+    width: 150px;
+    height: 30px;
+    font-style: bold;
+    font-size: large;
+}
