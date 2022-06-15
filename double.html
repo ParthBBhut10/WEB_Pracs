@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter the array <input type="text" id="in">
+    <input value="Double" type="button" id="arr" onclick="double()">
+    <script>
+        function double() {
+            const input = document.getElementById("in").value;
+            const arr = input.split(" ");
+            const nums = arr.map((str) => {
+                return Number(str);
+            });
+            document.write(nums);
+            const ans = nums.map((n) => {
+                return n * 2;
+            });
+            document.write(ans);
+            document.getElementById("ans").value = ans;
+        }
+    </script>
+</body>
+
+</html>
